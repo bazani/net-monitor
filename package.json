@@ -1,0 +1,23 @@
+{
+  "name": "net-monitor",
+  "version": "0.0.1",
+  "description": "CLI tool to monitor network connectivity with internet and a few devices on the network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bazani/net-monitor.git"
+  },
+  "keywords": [
+    "network",
+    "monitor"
+  ],
+  "author": "Mateus Bazani <mrbazani@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/bazani/net-monitor/issues"
+  },
+  "homepage": "https://github.com/bazani/net-monitor#readme"
+}
