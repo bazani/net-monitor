@@ -1,0 +1,5 @@
+interval: 30
+targets:
+  - 1.1.1.1
+  - teams.microsoft.com
+  - google.com
