@@ -7,6 +7,7 @@ import (
 	"os/exec"
 	"runtime"
 	"time"
+	"path/filepath"
 
 	"github.com/fatih/color"
 	"gopkg.in/yaml.v3"
@@ -18,7 +19,16 @@ type Config struct {
 }
 
 func loadConfig(filename string) (*Config, error) {
-	file, err := os.Open(filename)
+	execPath, err := os.Executable()
+	if err != nil {
+		return nil, fmt.Errorf("erro ao obter caminho do executável: %w", err)
+	}
+	
+	execDir := filepath.Dir(execPath)
+
+	yamlPath := filepath.Join(execDir, filename)
+
+	file, err := os.Open(yamlPath)
 	if err != nil {
 		return nil, err
 	}
